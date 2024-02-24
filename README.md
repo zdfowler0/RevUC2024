@@ -30,25 +30,25 @@ Craeted for Revelution UC 2024
 - One operation
 - No negatives
 
-### Level 3
+### Level 3 (Levels 1 & 2)
 - Addition, Subtraction
 - 2 numbers 0 - 5
 - One operation
 - No negatives
 
-### Level 3
+### Level 4 (Levels 1 & 2 with larger range)
 - Addition, Subtraction
 - 2 numbers 0 - 20
 - One operation
 - No negatives
 
-### Level 4
+### Level 5 (Levels 1 & 2 with larger range)
 - Addition, Subtraction
 - 2 or 3 numbers 0 - 100
 - One operation
 - No negatives
 
-### Level 5
+### Level 6
 - Addition, Subtraction
 - 2 or 3 numbers 0 - 100
 - Up to two operation
