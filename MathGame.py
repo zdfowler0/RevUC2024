@@ -3,27 +3,38 @@ import random
 import math
 
 # list of valid operations
-operations = ["+", "-", "*", "/", "^", "^-"]
+operations = [" + ", " - ", " * ", " / ", " ^", " ^-"]
+
+# global variable answer for each problem
+ans = 0
 
 # function to generate level 1 problems
 def generate_level_1_problem(lower=0, upper=5):
+    # create random numbers
     num1 = random.randint(lower, upper)
     num2 = random.randint(lower, upper)
 
-    print(f"{num1} + {num2}")
+    # update answer
+    global ans
+    ans = num1 + num2
+    print(ans)
 
-    result = num1 + num2
-    print(result)
+    # return the problem as a string
+    return f"{num1} + {num2}"
 
 # function to generate level 2 problems
 def generate_level_2_problem(lower=0, upper=5):
+    # generate random numbers
     num1 = random.randint(lower, upper)
     num2 = random.randint(lower, num1)
 
-    print(f"{num1} - {num2}")
+    # update answer
+    global ans
+    ans = num1 - num2
+    print(ans)
 
-    result = num1 - num2
-    print(result)
+    # return the problem as a string
+    return f"{num1} - {num2}"
 
 # function to generate level 3 problems
 def generate_level_3_problem():
@@ -31,9 +42,9 @@ def generate_level_3_problem():
     operation = random.randint(0, 1)
     
     if(operation == 0): # Addition
-        generate_level_1_problem()
+        return generate_level_1_problem()
     else: # Subtraction
-        generate_level_2_problem()
+        return generate_level_2_problem()
 
 # function to generate level 4 problems
 def generate_level_4_problem():
@@ -45,9 +56,9 @@ def generate_level_4_problem():
 
     if(operation == 0): # Addition
         upper /= 2
-        generate_level_1_problem(lower=lower, upper=upper)
+        return generate_level_1_problem(lower=lower, upper=upper)
     else: # Subtraction
-        generate_level_2_problem(lower=lower, upper=upper)
+        return generate_level_2_problem(lower=lower, upper=upper)
 
 # function to generate level 5 problems
 def generate_level_5_problem():
@@ -60,9 +71,9 @@ def generate_level_5_problem():
 
     if(operation == 0): # Addition
         upper /= 2
-        generate_level_1_problem(lower=lower, upper=upper)
+        return generate_level_1_problem(lower=lower, upper=upper)
     else: # Subtration
-        generate_level_2_problem(lower=lower, upper=upper)
+        return generate_level_2_problem(lower=lower, upper=upper)
 
 # generate a problem with a specified level
 def generate_problem(level):
@@ -71,23 +82,22 @@ def generate_problem(level):
     # determine which level problem to generate
     match level:
         case 1:
-            generate_level_1_problem()
+            return generate_level_1_problem()
         case 2:
-            generate_level_2_problem()
+            return generate_level_2_problem()
         case 3:
-            generate_level_3_problem()
+            return generate_level_3_problem()
         case 4:
-            generate_level_4_problem()
+            return generate_level_4_problem()
         case 5:
-            generate_level_5_problem()
+            return generate_level_5_problem()
         case _:
             print("ERROR: NO LEVEL 0 PROBLEMS")
-
-# Test start
+    
+# Test print
 print("Welcome to the Math Game!")
 print("Mode: High Score\n")
 
-# Generate 5 problems levels 1 - 5
+# Generate 5 problems levels 1-5
 for i in range(1, 6):
-    generate_problem(i)
-    print("")
+    print(generate_problem(i) + "\n")
