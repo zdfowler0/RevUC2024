@@ -1,5 +1,5 @@
 # Math Game
-Craeted for Revelution UC 2024
+Created for Revelution UC 2024
 
 - Using Python
 
