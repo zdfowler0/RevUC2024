@@ -20,19 +20,19 @@ Craeted for Revelution UC 2024
 - Work on a specific level as long as you would like
 
 ### Level 1
-- Addition (Within 5)
+- Addition (Within 10)
 - Numbers between 0 - 5
 - One operation
 
 ### Level 2
-- Subtraction (Within 5)
-- Numbers 0 - 5
+- Subtraction (Within 10)
+- Numbers 0 - 10
 - One operation
 - No negatives
 
 ### Level 3 (Levels 1 & 2)
 - Addition, Subtraction (Within 10)
-- 2 numbers 0 - 5
+- 2 numbers 0 - 10
 - One operation
 - No negatives
 
@@ -48,11 +48,11 @@ Craeted for Revelution UC 2024
 - One operation
 - No negatives
 
-### Level 6
+### Level 6 (Level 5 with an additional operation)
 - Addition, Subtraction (Within 100)
 - 2 or 3 numbers 0 - 100
 - Up to two operation
-- No negatives
+- Negatives
 
 > Step Up
 
@@ -74,7 +74,7 @@ Craeted for Revelution UC 2024
 - One operation
 - No negatives
 
-### Level 10
+### Level 10 (Level 8 with more range)
 - Division (Within 100)
 - 2 numbers 1 - 100
 - One operation
@@ -86,7 +86,7 @@ Craeted for Revelution UC 2024
 - One operation
 - No negatives or fractions
 
-### Level 12
+### Level 12 (Level 5
 - Multiplication, Division (Within 100)
 - 3 numbers 1 - 100
 - Two operations
