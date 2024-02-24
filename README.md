@@ -20,68 +20,76 @@ Craeted for Revelution UC 2024
 - Work on a specific level as long as you would like
 
 ### Level 1
-- Addition
-- 2 numbers between 0 - 5
+- Addition (Within 5)
+- Numbers between 0 - 5
 - One operation
 
 ### Level 2
-- Subtraction
-- 2 numbers are between 0 - 5
+- Subtraction (Within 5)
+- Numbers 0 - 5
 - One operation
 - No negatives
 
 ### Level 3 (Levels 1 & 2)
-- Addition, Subtraction
+- Addition, Subtraction (Within 10)
 - 2 numbers 0 - 5
 - One operation
 - No negatives
 
 ### Level 4 (Levels 1 & 2 with larger range)
-- Addition, Subtraction
+- Addition, Subtraction (Within 20)
 - 2 numbers 0 - 20
 - One operation
 - No negatives
 
-### Level 5 (Levels 1 & 2 with larger range)
-- Addition, Subtraction
+### Level 5 (Levels 1 & 2 with extra larger range)
+- Addition, Subtraction (Within 100)
 - 2 or 3 numbers 0 - 100
 - One operation
 - No negatives
 
 ### Level 6
-- Addition, Subtraction
-- 2 or 3 numbers 0 - 20
-- Up to two operation
-- No negatives
-
-### Level 7
-- Addition, Subtraction
+- Addition, Subtraction (Within 100)
 - 2 or 3 numbers 0 - 100
 - Up to two operation
 - No negatives
 
-> 
+> Step Up
 
-### Level 8
-- Multiplication
+### Level 7
+- Multiplication (Within 10)
 - 2 numbers 1 - 5
 - One operation
 - No negatives
 
-### Level 9
-- Division
-- 2 numbers 1 - 100
+### Level 8 
+- Division (Within 20)
+- 2 numbers 1 - 20
 - One operation
-- No negatives or floats
+- No negatives or fractions
 
-### Level 10 (Level 8 with more range)
-- Multiplication
-- 2 numbers 1 - 10
+### Level 9 (Level 7 with more range)
+- Multiplication (Within 100)
+- 2 numbers 1 - 50
 - One operation
 - No negatives
 
-### Level 11
-- Multiplication, Division
+### Level 10
+- Division (Within 100)
 - 2 numbers 1 - 100
 - One operation
-- No negatives or floats
+- No negatives or fractions
+
+### Level 11 (Levels 8 & 9)
+- Multiplication, Division (Within 100)
+- 2 numbers 1 - 100
+- One operation
+- No negatives or fractions
+
+### Level 12
+- Multiplication, Division (Within 100)
+- 3 numbers 1 - 100
+- Two operations
+- No negatives or fractions
+
+> Step Up
