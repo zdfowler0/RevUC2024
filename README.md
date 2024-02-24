@@ -57,7 +57,7 @@ Created for Revelution UC 2024
 > Step Up
 
 ### Level 7
-- Multiplication (Within 10)
+- Multiplication (Within 25)
 - 2 numbers 1 - 5
 - One operation
 - No negatives
