@@ -50,6 +50,38 @@ Craeted for Revelution UC 2024
 
 ### Level 6
 - Addition, Subtraction
+- 2 or 3 numbers 0 - 20
+- Up to two operation
+- No negatives
+
+### Level 7
+- Addition, Subtraction
 - 2 or 3 numbers 0 - 100
 - Up to two operation
 - No negatives
+
+> 
+
+### Level 8
+- Multiplication
+- 2 numbers 1 - 5
+- One operation
+- No negatives
+
+### Level 9
+- Division
+- 2 numbers 1 - 100
+- One operation
+- No negatives or floats
+
+### Level 10 (Level 8 with more range)
+- Multiplication
+- 2 numbers 1 - 10
+- One operation
+- No negatives
+
+### Level 11
+- Multiplication, Division
+- 2 numbers 1 - 100
+- One operation
+- No negatives or floats
