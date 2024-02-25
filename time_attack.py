@@ -10,8 +10,11 @@ def play_time_attack(name="Player",level=1,timer=30):
     root = tkinter.Tk()
     numbercorrect = tkinter.Tk()
 
+
     #number correct
     numbercorrect.geometry("100x100+1400+1")
+    #timer 
+
     #window
     root.geometry("300x105+1+1")
     root.title("Time Attack")
@@ -20,22 +23,35 @@ def play_time_attack(name="Player",level=1,timer=30):
 
 
     #scoredisplay
+    labelscore = Tk.Label(numbercorrect, text = "Score: ")
+    labelscore.place(x=5, y=5)
     score = 0
     scoredisplay = Tk.Label(numbercorrect, text = f"{score}")
-    scoredisplay.place(x=5,y=5)
+    scoredisplay.place(x=50,y=5)
+
+    #timeer
+    labeltimer =Tk.Label(numbercorrect, text = "Time left: ")
+    labeltimer.place(x=5,y=50)
+    timershow = 0 
+    timerdisplay =Tk.Label(numbercorrect, text = f"{timershow}")
+    timerdisplay.place(x=60, y= 50)
 
     def wait():
         score = 0
         start = time.time()
+        timershow = int(abs(time.time() - start - 30))
 
         while(timer > time.time() - start):
+            timershow = int(abs(time.time() - start - 30))
+            timerdisplay =Tk.Label(numbercorrect, text = f"{timershow}")
+            timerdisplay.place(x=60, y= 50)
             problem = MathGame.generate_problem(1)
             num = askinteger("Input", f"Input the Answer to {problem}")
             if num == MathGame.ans:
                     #scoredisplay
                     score += 1
                     scoredisplay = Tk.Label(numbercorrect, text = f"{score}")
-                    scoredisplay.place(x=5,y=5)
+                    scoredisplay.place(x=50,y=5)
             elif num == None:
                     return 0
     
