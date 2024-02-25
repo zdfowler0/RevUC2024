@@ -1,4 +1,6 @@
 def play_time_attack(name="Player",level=1,timer=30):
+    import time
+    import MathGame
     from tkinter.simpledialog import askinteger
     import tkinter as Tk
     import tkinter
@@ -15,27 +17,35 @@ def play_time_attack(name="Player",level=1,timer=30):
     root.title("Time Attack")
     instructions = ttk.Label(root, text="Answer as many quesitons as you can in 30 seconds")
     instructions.pack()
-    # Introduction Sequence
-    def count_down():
-        three = ttk.Label(root, text = "3")
-        three.pack()
 
-        #three.after(1000, three.pack_forget)
 
-        two = ttk.Label(root, text = "2")
-        two.pack_forget()
-        two.after(1000, two.pack)
+    #scoredisplay
+    score = 0
+    scoredisplay = Tk.Label(numbercorrect, text = f"{score}")
+    scoredisplay.place(x=5,y=5)
 
-        one = ttk.Label(root, text = "1")
-        one.pack_forget()
-        one.after(2000, one.pack)
+    def wait():
+        score = 0
+        start = time.time()
 
-        GO = ttk.Label(root, text = "GO!!!")
-        GO.after(3000, GO.pack)
+        while(timer > time.time() - start):
+            problem = MathGame.generate_problem(1)
+            num = askinteger("Input", f"Input the Answer to {problem}")
+            if num == MathGame.ans:
+                    #scoredisplay
+                    score += 1
+                    scoredisplay = Tk.Label(numbercorrect, text = f"{score}")
+                    scoredisplay.place(x=5,y=5)
+            elif num == None:
+                    return 0
+    
 
-    #countdown button
-    countdown = Tk.Button(root, text ="Start Game",fg ='white', bg = 'red', command = count_down)
-    countdown.place(x=50,y=45)
+    
+       
+        
+    #start button
+    start = Tk.Button(root, text ="GO",fg ='white', bg = 'red', command = wait)
+    start.place(x=50,y=45)
 
     #back button
     backtomenu = tkinter.Tk()
@@ -50,7 +60,7 @@ def play_time_attack(name="Player",level=1,timer=30):
     backbutton = Tk.Button(backtomenu, text= "Back", command = back)
     backbutton.place(x=5,y=5)
     
-
+    
 
     
 
@@ -75,4 +85,4 @@ def play_time_attack(name="Player",level=1,timer=30):
     #print("End!")
     #print(f"{name} got {total_correct} level {level} questions correct in {timer} seconds!")
     root.mainloop()
-#play_time_attack()
+play_time_attack()
