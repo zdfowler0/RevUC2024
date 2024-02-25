@@ -51,6 +51,7 @@ def generate_level_4_problem():
     # determine operation
     operation = random.randint(0, 1)
     
+    # bounds
     lower = 0
     upper = 20
 
@@ -67,7 +68,7 @@ def generate_level_5_problem():
     operation = random.randint(0, 1)
     
     # bounds for operation
-    lower = 0
+    lower = 5
     upper = 100
 
     if(operation == 0): # Addition
@@ -82,7 +83,7 @@ def generate_level_6_problem():
     operation = random.randint(0, 1)
     
     # bounds for operation
-    lower = 0
+    lower = 5
     upper = 100
     global ans
 
@@ -102,6 +103,84 @@ def generate_level_6_problem():
         print(ans)
         return output + f" - {num3}"
 
+'''
+↑ Addition/Subtraction
+↓ Multiplication/Division
+'''
+
+# function to generate level 7 problems
+def generate_level_7_problem(lower=0, upper=5):
+    # create random numbers
+    num1 = random.randint(lower, upper)
+    num2 = random.randint(lower, upper)
+
+    # update answer
+    global ans
+    ans = num1 * num2
+    print(ans)
+
+    # return the problem as a string
+    return f"{num1} * {num2}"
+
+# function to generate level 8 problems
+def generate_level_8_problem(lower=2, upper=20):
+    num2 = 1
+    # make sure no divide by 1
+    while(num2 == 1):
+        # create random numbers
+        num1 = random.randint(lower, upper)
+        
+        # make sure division result will be an int
+        factors = []
+        for i in range(1, num1):
+            if(num1 % i == 0):
+                factors.append(i)
+
+        num2 = factors[random.randint(0, len(factors)-1)]
+    
+    # update answer
+    global ans
+    ans = int(num1 / num2)
+    print(ans)
+
+    # return the problem as a string
+    return f"{num1} / {num2}"
+
+# function to generate level 9 problems
+def generate_level_9_problem():
+    lower = 3
+    upper = 10
+
+    return generate_level_7_problem(lower, upper)
+
+# function to generate level 10 problems
+def generate_level_10_problem():
+    lower = 5
+    upper = 100
+
+    return generate_level_8_problem(lower, upper)
+
+# function to generate level 11 problems
+def generate_level_11_problem():
+    # determine operation
+    operation = random.randint(0, 1)
+
+    if(operation == 0): # Multiplication
+        # bounds for operation
+        lower = 2
+        upper = 12
+        return generate_level_7_problem(lower=lower, upper=upper)
+    else: # Division
+        # bounds for operation
+        lower = 5
+        upper = 100
+        return generate_level_10_problem() 
+
+
+'''
+Run tests
+'''
+
 # generate a problem with a specified level
 def generate_problem(level):
     print(f"Level {level} problem:")
@@ -120,13 +199,23 @@ def generate_problem(level):
             return generate_level_5_problem()
         case 6:
             return generate_level_6_problem()
+        case 7:
+            return generate_level_7_problem()
+        case 8:
+            return generate_level_8_problem()
+        case 9:
+            return generate_level_9_problem()
+        case 10:
+            return generate_level_10_problem()
+        case 11:
+            return generate_level_11_problem()
         case _:
-            print("ERROR: NO LEVEL 0 PROBLEMS")
+            print(f"ERROR: NO LEVEL WITH ID {level}")
     
 # Test print
 print("Welcome to the Math Game!")
 print("Mode: High Score\n")
 
 # Generate 5 problems levels 1-5
-for i in range(1, 7):
+for i in range(1, 12):
     print(generate_problem(i) + "\n")
