@@ -36,6 +36,7 @@ def play_high_score(name="Player"):
     def play_game():
         score = 0
         #display score
+        scoredisplay.destroy()
         scoredisplay = Tk.Label(scorewindow, text = f"{score}")
         scoredisplay.place(x=50,y=30)
         
@@ -72,14 +73,21 @@ def play_high_score(name="Player"):
                     scoredisplay.place(x=50,y=30)
                 elif num == None:
                     return 0
+                else:
+                    return 0
+                    scoredisplay.after(3000, scoredisplay.destory)
             else:
                 num = askinteger("Input", f"Input the Answer to {problem}")
                 if num == EquationQuest.ans:
                     score += int(level * 100 * total_bonus)
                     #display score
+                    scoredisplay.destroy()
                     scoredisplay = Tk.Label(scorewindow, text = f"{score}")
                     scoredisplay.place(x=50,y=30)
                 elif num == None:
+                    return 0
+                else:
+                    scoredisplay.after(3000, scoredisplay.destory)
                     return 0
 
     #create start button
