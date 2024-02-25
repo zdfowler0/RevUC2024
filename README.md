@@ -87,8 +87,12 @@ Download everything in the main folder and run MainMenu.py
 - One operation
 - No negatives or fractions
 
-### Level 12 (Level 5
+### Level 12 (Level 11 with extra operation)
 - Multiplication, Division (Within 100)
 - 3 numbers 1 - 100
 - Two operations
 - No negatives or fractions
+
+## Additional Features:
+EquationQuest.py can be run and the individual game modes can be played in the console from there as well.
+EquationQuest_stat.py will generate the average value and standard deviation for each problem type.
