@@ -80,7 +80,7 @@ Created for Revelution UC 2024
 - One operation
 - No negatives or fractions
 
-### Level 11 (Levels 8 & 9)
+### Level 11 (Levels 9 & 10)
 - Multiplication, Division (Within 100)
 - 2 numbers 1 - 100
 - One operation
@@ -91,5 +91,3 @@ Created for Revelution UC 2024
 - 3 numbers 1 - 100
 - Two operations
 - No negatives or fractions
-
-> Step Up
