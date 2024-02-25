@@ -1,5 +1,7 @@
 #import python files
 import focus_mode
+import time_attack
+import high_score
 
 #import tkinter
 from tkinter.simpledialog import askinteger
@@ -26,14 +28,23 @@ welcometothe.pack()
 mathgame = Label(root, text="Math Game!", font = titleFont)
 mathgame.pack()
  
-#function
+#functions
 def play_focus_mode():
     focus_mode.focus_mode()
+def play_time_attack():
+    time_attack
+def play_high_score():
+    high_score
 
 
 #button
-focusmode = Button(root, text ="Focus Mode",font = buttonFonts,fg = 'white', bg = 'red',command = play_focus_mode)
-focusmode.place(x=500,y=300)
+focusmode = Button(root, text ="Focus Mode",font = buttonFonts,fg = 'white', bg = 'blue',command = play_focus_mode)
+focusmode.place(x=300,y=300)
 
+timeattack = Button(root, text = "Time Attack", font = buttonFonts, fg = 'white', bg = 'red', command = play_time_attack)
+timeattack.place(x= 600, y=300)
+
+highscore = Button(root, text = "High Score", font = buttonFonts, fg = 'white', bg = 'green', command = play_high_score)
+highscore.place(x=900, y=300)
 
 root.mainloop()
