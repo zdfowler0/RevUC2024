@@ -6,7 +6,7 @@ and standard deviaion of each question type will be
 found and printed to the console.
 '''
 import math
-import Official.EquationQuest as EquationQuest
+import EquationQuest
 
 num_problems = 10000
 problems = []
