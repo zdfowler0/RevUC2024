@@ -1,6 +1,6 @@
 def play_time_attack(name="Player",level=1,timer=30):
     import time
-    import MathGame
+    import EquationQuest
     from tkinter.simpledialog import askinteger
     import tkinter as Tk
     import tkinter
@@ -45,9 +45,9 @@ def play_time_attack(name="Player",level=1,timer=30):
             timershow = int(abs(time.time() - start - 30))
             timerdisplay =Tk.Label(numbercorrect, text = f"{timershow}")
             timerdisplay.place(x=60, y= 50)
-            problem = MathGame.generate_problem(1)
+            problem = EquationQuest.generate_problem(1)
             num = askinteger("Input", f"Input the Answer to {problem}")
-            if num == MathGame.ans:
+            if num == EquationQuest.ans:
                     #scoredisplay
                     score += 1
                     scoredisplay = Tk.Label(numbercorrect, text = f"{score}")
