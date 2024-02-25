@@ -17,7 +17,6 @@ def generate_level_1_problem(lower=0, upper=5):
     # update answer
     global ans
     ans = num1 + num2
-    print(ans)
 
     # return the problem as a string
     return f"{num1} + {num2}"
@@ -31,7 +30,6 @@ def generate_level_2_problem(lower=0, upper=10):
     # update answer
     global ans
     ans = num1 - num2
-    print(ans)
 
     # return the problem as a string
     return f"{num1} - {num2}"
@@ -95,12 +93,10 @@ def generate_level_6_problem():
     if(operation == 0): # Add third number
         output = generate_level_5_problem()
         ans += num3
-        print(ans)
         return output + f" + {num3}"
     else: # Subtract
         output = generate_level_5_problem()
         ans -= num3
-        print(ans)
         return f"{output} - {num3}"
 
 '''
@@ -117,7 +113,6 @@ def generate_level_7_problem(lower=0, upper=5):
     # update answer
     global ans
     ans = num1 * num2
-    print(ans)
 
     # return the problem as a string
     return f"{num1} * {num2}"
@@ -142,7 +137,6 @@ def generate_level_8_problem(lower=2, upper=20):
     # update answer
     global ans
     ans = int(num1 / num2)
-    print(ans)
 
     # return the problem as a string
     return f"{num1} / {num2}"
@@ -195,7 +189,6 @@ def generate_level_12_problem():
     if(operation1 == 0): # Multiply
         num3 = random.randint(lower, upper)
         ans *= num3
-        print(ans)
         return f"({output}) * {num3}"
     else: # Divide
         
@@ -213,7 +206,6 @@ def generate_level_12_problem():
             num3 = factors[random.randint(0, len(factors)-1)]
             
         ans /= num3
-        print(ans)
         return f"({output}) / {num3}"
 
 
@@ -253,11 +245,6 @@ def generate_problem(level):
             return generate_level_12_problem()
         case _:
             print(f"ERROR: NO LEVEL WITH ID {level}")
-    
-# Test print
-print("Welcome to the Math Game!")
-print("Mode: High Score\n")
 
-# Generate 5 problems levels 1-5
-for i in range(1, 13):
-    print(generate_problem(i) + "\n")
+def play_high_score():
+    print("Mode: High Score")
