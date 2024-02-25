@@ -1,7 +1,8 @@
-# Math Game
-Created for Revelution UC 2024
+# EquationQuest!
+Created for Revelution UC 2024 by Zach Fowler and Alex May.
 
-- Using Python
+### Code instructions:
+Download everything in the main folder and run MainMenu.py
 
 # Game Modes:
 - High Score
