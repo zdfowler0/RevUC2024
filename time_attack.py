@@ -55,8 +55,6 @@ def play_time_attack(name="Player",level=1,timer=30):
             elif num == None:
                     return 0
     
-
-    
        
         
     #start button
@@ -77,28 +75,5 @@ def play_time_attack(name="Player",level=1,timer=30):
     backbutton.place(x=5,y=5)
     
     
-
-    
-
-    # set the start of the timer
-    #start = time.time()
-
-    #total_correct = 0
-
-    # timer
-    #while(timer > time.time() - start):
-        # let the user know how much time is left
-     #   print("Time left: {0}".format(int(abs((time.time() - start) - timer))))
-
-        # get user input and generate question
-      #  user_ans = int(input(MathGame.generate_problem(level) + " = "))
-        
-        # increment the user's score if they get a problem right 
-       # if(user_ans == MathGame.ans):
-        #    total_correct += 1
-        #print()
-        
-    #print("End!")
-    #print(f"{name} got {total_correct} level {level} questions correct in {timer} seconds!")
     root.mainloop()
 play_time_attack()
