@@ -1,6 +1,6 @@
 def play_high_score(name="Player"):
     import random
-    import MathGame
+    import EquationQuest
 
     from tkinter.simpledialog import askinteger
     import tkinter as Tk
@@ -61,11 +61,11 @@ def play_high_score(name="Player"):
                 bonus2 = 1
             total_bonus = bonus15 * bonus2
 
-            problem = MathGame.generate_problem(level)
+            problem = EquationQuest.generate_problem(level)
 
             if(total_bonus > 1):
                 num = askinteger("Input", f"Input the Answer to {problem} ({total_bonus} bonus)")
-                if num == MathGame.ans:
+                if num == EquationQuest.ans:
                     score += int(level * 100 * total_bonus)
                     #display score
                     scoredisplay = Tk.Label(scorewindow, text = f"{score}")
@@ -74,7 +74,7 @@ def play_high_score(name="Player"):
                     return 0
             else:
                 num = askinteger("Input", f"Input the Answer to {problem}")
-                if num == MathGame.ans:
+                if num == EquationQuest.ans:
                     score += int(level * 100 * total_bonus)
                     #display score
                     scoredisplay = Tk.Label(scorewindow, text = f"{score}")
