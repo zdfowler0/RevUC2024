@@ -1,11 +1,12 @@
 # import libraries
 import random
 import math
+import time
 
 # list of valid operations
 operations = [" + ", " - ", " * ", " / ", " ^", " ^-"]
 
-# global variable answer for each problem
+# global variables
 ans = 0
 
 # function to generate level 1 problems
@@ -246,5 +247,62 @@ def generate_problem(level):
         case _:
             print(f"ERROR: NO LEVEL WITH ID {level}")
 
-def play_high_score():
+def play_high_score(name="Player"):
     print("Mode: High Score")
+    print("Play until you lose!")
+
+def play_time_attack(name="Player",level=1,timer=30):
+    print("Mode: Time Attack")
+    print(f"Answser as may questions as you can in {timer} seconds!")
+
+    # Introduction Sequence
+    time.sleep(1)
+    for i in range(3, 0, -1):
+        print(i)
+        time.sleep(1)
+    print("GO!")
+
+    # set the start of the timer
+    start = time.time()
+
+    total_correct = 0
+
+    # timer
+    while(timer > time.time() - start):
+        # let the user know how much time is left
+        print("Time left: {0}".format(int(abs((time.time() - start) - timer))))
+
+        # get user input and generate question
+        user_ans = int(input(generate_problem(level) + " = "))
+        
+        # increment the user's score if they get a problem right 
+        if(user_ans == ans):
+            total_correct += 1
+        print()
+        
+    print("End!")
+    print(f"{name} got {total_correct} level {level} questions correct in {timer} seconds!")
+
+# play focus mode
+def play_focus(name="Player", level=1, questions=5):
+    # show game mode and description
+    print("Mode: Focus")
+    print("Answer as many questions as you want of a certain level!")
+    
+    # keep track of the amount of questions that the user gets correct
+    total_correct = 0
+    
+    # prompt the user for the specified amount of questions
+    for i in range(questions):
+        # get user input and generate question
+        user_ans = int(input(generate_problem(level) + " = "))
+        
+        # increment the user's score if they get a problem right 
+        if(user_ans == ans):
+            total_correct += 1
+        print()
+    
+    # tell the user how many problems they got correct
+    print(f"{name} got {total_correct}/{questions} level {level} questions correct!")
+
+play_time_attack("Dev", 1, 30)
