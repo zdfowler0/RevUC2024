@@ -1,12 +1,11 @@
 '''
 This file contains the back end code for most of
-the math game. The levels are are loosely based on
+EquationQuest. The levels are are loosely based on
 common core standards for math up until about grade 5.
 The main function of this code is to provide a versitle
 way to generate problems in line with the defined levels
 in the README. 
 '''
-
 # import libraries
 import random
 import math
@@ -212,12 +211,12 @@ def generate_level_12_problem():
 
             num3 = factors[random.randint(0, len(factors)-1)]
             
-        ans /= num3
+        ans = int(ans / num3)
         return f"({output}) / {num3}"
 
 # generate a problem with a specified level
 def generate_problem(level):
-    print(f"Level {level} problem:")
+    #print(f"Level {level} problem:")
     
     # determine which level problem to generate
     match level:
@@ -248,20 +247,13 @@ def generate_problem(level):
         case _:
             print(f"ERROR: NO LEVEL WITH ID {level}")
 
-'''
-Contains functions for the three game modes availible
-in the main menu but playable through the console.
-'''
-
 # play high score mode
 def play_high_score(name="Player"):
-    # describe game objective
     print("Mode: High Score")
     print("Play until you lose!\n")
 
     score = 0
 
-    # main game loop
     while(True):
         print(f"Score: {score}")
         
@@ -308,7 +300,6 @@ def play_high_score(name="Player"):
           
 # play time attack mode
 def play_time_attack(name="Player", level=1, timer=30):
-    # descrie game objective
     print("Mode: Time Attack")
     print(f"Answser as may questions as you can in {timer} seconds!\n")
 
@@ -324,7 +315,7 @@ def play_time_attack(name="Player", level=1, timer=30):
 
     total_correct = 0
 
-    # main game loop
+    # timer
     while(timer > time.time() - start):
         # let the user know how much time is left
         print("Time left: {0}".format(int(abs((time.time() - start) - timer))))
