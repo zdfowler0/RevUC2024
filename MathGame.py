@@ -101,7 +101,7 @@ def generate_level_6_problem():
         output = generate_level_5_problem()
         ans -= num3
         print(ans)
-        return output + f" - {num3}"
+        return f"{output} - {num3}"
 
 '''
 ↑ Addition/Subtraction
@@ -125,7 +125,8 @@ def generate_level_7_problem(lower=0, upper=5):
 # function to generate level 8 problems
 def generate_level_8_problem(lower=2, upper=20):
     num2 = 1
-    # make sure no divide by 1
+
+    # make sure not to divide by 1
     while(num2 == 1):
         # create random numbers
         num1 = random.randint(lower, upper)
@@ -176,6 +177,45 @@ def generate_level_11_problem():
         upper = 100
         return generate_level_10_problem() 
 
+# function to generate level 11 problems
+def generate_level_12_problem():
+    # determine operation
+    operation1 = random.randint(0, 1)
+
+    # bounds for operation
+    lower = 5
+    upper = 100
+    global ans
+
+    # make third number
+    num3 = 1
+
+    output = generate_level_11_problem()
+
+    if(operation1 == 0): # Multiply
+        num3 = random.randint(lower, upper)
+        ans *= num3
+        print(ans)
+        return f"({output}) * {num3}"
+    else: # Divide
+        
+        # make sure not to divide by 1
+        while(num3 == 1):
+            # create random numbers
+            output = generate_level_11_problem()
+            
+            # make sure division result will be an int
+            factors = []
+            for i in range(1, ans):
+                if(ans % i == 0):
+                    factors.append(i)
+
+            num3 = factors[random.randint(0, len(factors)-1)]
+            
+        ans /= num3
+        print(ans)
+        return f"({output}) / {num3}"
+
 
 '''
 Run tests
@@ -209,6 +249,8 @@ def generate_problem(level):
             return generate_level_10_problem()
         case 11:
             return generate_level_11_problem()
+        case 12:
+            return generate_level_12_problem()
         case _:
             print(f"ERROR: NO LEVEL WITH ID {level}")
     
@@ -217,5 +259,5 @@ print("Welcome to the Math Game!")
 print("Mode: High Score\n")
 
 # Generate 5 problems levels 1-5
-for i in range(1, 12):
+for i in range(1, 13):
     print(generate_problem(i) + "\n")
