@@ -50,10 +50,6 @@ def play_time_attack(name="Player",level=1,timer=30):
     backbutton = Tk.Button(backtomenu, text= "Back", command = back)
     backbutton.place(x=5,y=5)
     
-
-
-    
-
     # set the start of the timer
     #start = time.time()
 
@@ -65,10 +61,10 @@ def play_time_attack(name="Player",level=1,timer=30):
      #   print("Time left: {0}".format(int(abs((time.time() - start) - timer))))
 
         # get user input and generate question
-      #  user_ans = int(input(MathGame.generate_problem(level) + " = "))
+      #  user_ans = int(input(EquationQuest.generate_problem(level) + " = "))
         
         # increment the user's score if they get a problem right 
-       # if(user_ans == MathGame.ans):
+       # if(user_ans == EquationQuest.ans):
         #    total_correct += 1
         #print()
         
