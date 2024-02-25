@@ -45,7 +45,7 @@ def focus_mode():
         while progressBar["value"] < 100:
             problem = EquationQuest.generate_problem(1)
             num = askinteger("Input", f"Input the Answer to {problem}")
-            print(num)
+            
             if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
@@ -64,7 +64,7 @@ def focus_mode():
         while progressBar["value"] < 100:
             problem = EquationQuest.generate_problem(2)
             num = askinteger("Input", f"Input the Answer to {problem}")
-            print(num)
+            
             if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
@@ -83,7 +83,7 @@ def focus_mode():
         while progressBar["value"] < 100:
             problem = EquationQuest.generate_problem(3)
             num = askinteger("Input", f"Input the Answer to {problem}")
-            print(num)
+            
             if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
@@ -102,7 +102,7 @@ def focus_mode():
         while progressBar["value"] < 100:
             problem = EquationQuest.generate_problem(4)
             num = askinteger("Input", f"Input the Answer to {problem}")
-            print(num)
+            
             if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
@@ -121,7 +121,7 @@ def focus_mode():
         while progressBar["value"] < 100:
             problem = EquationQuest.generate_problem(5)
             num = askinteger("Input", f"Input the Answer to {problem}")
-            print(num)
+            
             if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
@@ -140,7 +140,7 @@ def focus_mode():
         while progressBar["value"] < 100:
             problem = EquationQuest.generate_problem(6)
             num = askinteger("Input", f"Input the Answer to {problem}")
-            print(num)
+            
             if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
@@ -159,7 +159,7 @@ def focus_mode():
         while progressBar["value"] < 100:
             problem = EquationQuest.generate_problem(7)
             num = askinteger("Input", f"Input the Answer to {problem}")
-            print(num)
+            
             if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
@@ -178,7 +178,7 @@ def focus_mode():
         while progressBar["value"] < 100:
             problem = EquationQuest.generate_problem(8)
             num = askinteger("Input", f"Input the Answer to {problem}")
-            print(num)
+            
             if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
@@ -197,7 +197,7 @@ def focus_mode():
         while progressBar["value"] < 100:
             problem = EquationQuest.generate_problem(9)
             num = askinteger("Input", f"Input the Answer to {problem}")
-            print(num)
+            
             if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
@@ -216,7 +216,7 @@ def focus_mode():
         while progressBar["value"] < 100:
             problem = EquationQuest.generate_problem(10)
             num = askinteger("Input", f"Input the Answer to {problem}")
-            print(num)
+            
             if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
@@ -235,7 +235,7 @@ def focus_mode():
         while progressBar["value"] < 100:
             problem = EquationQuest.generate_problem(11)
             num = askinteger("Input", f"Input the Answer to {problem}")
-            print(num)
+            
             if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
@@ -254,7 +254,7 @@ def focus_mode():
         while progressBar["value"] < 100:
             problem = EquationQuest.generate_problem(12)
             num = askinteger("Input", f"Input the Answer to {problem}")
-            print(num)
+            
             if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
