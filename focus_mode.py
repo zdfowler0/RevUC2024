@@ -1,6 +1,6 @@
 def focus_mode():
     # import back end
-    import MathGame
+    import EquationQuest
 
     #tkinter/GUI libraries
     from tkinter.simpledialog import askinteger
@@ -43,10 +43,10 @@ def focus_mode():
         frame.pack(padx = 5, pady = 5)
         
         while progressBar["value"] < 100:
-            problem = MathGame.generate_problem(1)
+            problem = EquationQuest.generate_problem(1)
             num = askinteger("Input", f"Input the Answer to {problem}")
             print(num)
-            if num == MathGame.ans:
+            if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
                 return 0
@@ -62,10 +62,10 @@ def focus_mode():
         frame.pack(padx = 5, pady = 5)
         
         while progressBar["value"] < 100:
-            problem = MathGame.generate_problem(2)
+            problem = EquationQuest.generate_problem(2)
             num = askinteger("Input", f"Input the Answer to {problem}")
             print(num)
-            if num == MathGame.ans:
+            if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
                 return 0
@@ -81,10 +81,10 @@ def focus_mode():
         frame.pack(padx = 5, pady = 5)
         
         while progressBar["value"] < 100:
-            problem = MathGame.generate_problem(3)
+            problem = EquationQuest.generate_problem(3)
             num = askinteger("Input", f"Input the Answer to {problem}")
             print(num)
-            if num == MathGame.ans:
+            if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
                 return 0
@@ -100,10 +100,10 @@ def focus_mode():
         frame.pack(padx = 5, pady = 5)
         
         while progressBar["value"] < 100:
-            problem = MathGame.generate_problem(4)
+            problem = EquationQuest.generate_problem(4)
             num = askinteger("Input", f"Input the Answer to {problem}")
             print(num)
-            if num == MathGame.ans:
+            if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
                 return 0
@@ -119,10 +119,10 @@ def focus_mode():
         frame.pack(padx = 5, pady = 5)
         
         while progressBar["value"] < 100:
-            problem = MathGame.generate_problem(5)
+            problem = EquationQuest.generate_problem(5)
             num = askinteger("Input", f"Input the Answer to {problem}")
             print(num)
-            if num == MathGame.ans:
+            if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
                 return 0
@@ -138,10 +138,10 @@ def focus_mode():
         frame.pack(padx = 5, pady = 5)
         
         while progressBar["value"] < 100:
-            problem = MathGame.generate_problem(6)
+            problem = EquationQuest.generate_problem(6)
             num = askinteger("Input", f"Input the Answer to {problem}")
             print(num)
-            if num == MathGame.ans:
+            if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
                 return 0
@@ -157,10 +157,10 @@ def focus_mode():
         frame.pack(padx = 5, pady = 5)
         
         while progressBar["value"] < 100:
-            problem = MathGame.generate_problem(7)
+            problem = EquationQuest.generate_problem(7)
             num = askinteger("Input", f"Input the Answer to {problem}")
             print(num)
-            if num == MathGame.ans:
+            if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
                 return 0
@@ -176,10 +176,10 @@ def focus_mode():
         frame.pack(padx = 5, pady = 5)
         
         while progressBar["value"] < 100:
-            problem = MathGame.generate_problem(8)
+            problem = EquationQuest.generate_problem(8)
             num = askinteger("Input", f"Input the Answer to {problem}")
             print(num)
-            if num == MathGame.ans:
+            if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
                 return 0
@@ -195,10 +195,10 @@ def focus_mode():
         frame.pack(padx = 5, pady = 5)
         
         while progressBar["value"] < 100:
-            problem = MathGame.generate_problem(9)
+            problem = EquationQuest.generate_problem(9)
             num = askinteger("Input", f"Input the Answer to {problem}")
             print(num)
-            if num == MathGame.ans:
+            if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
                 return 0
@@ -214,10 +214,10 @@ def focus_mode():
         frame.pack(padx = 5, pady = 5)
         
         while progressBar["value"] < 100:
-            problem = MathGame.generate_problem(10)
+            problem = EquationQuest.generate_problem(10)
             num = askinteger("Input", f"Input the Answer to {problem}")
             print(num)
-            if num == MathGame.ans:
+            if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
                 return 0
@@ -233,10 +233,10 @@ def focus_mode():
         frame.pack(padx = 5, pady = 5)
         
         while progressBar["value"] < 100:
-            problem = MathGame.generate_problem(11)
+            problem = EquationQuest.generate_problem(11)
             num = askinteger("Input", f"Input the Answer to {problem}")
             print(num)
-            if num == MathGame.ans:
+            if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
                 return 0
@@ -252,10 +252,10 @@ def focus_mode():
         frame.pack(padx = 5, pady = 5)
         
         while progressBar["value"] < 100:
-            problem = MathGame.generate_problem(12)
+            problem = EquationQuest.generate_problem(12)
             num = askinteger("Input", f"Input the Answer to {problem}")
             print(num)
-            if num == MathGame.ans:
+            if num == EquationQuest.ans:
                 progressBar.step(20)
             elif num == None:
                 return 0
