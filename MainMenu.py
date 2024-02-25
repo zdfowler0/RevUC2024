@@ -1,3 +1,7 @@
+'''
+This is the main menu for Equation Quest.
+Each button will start the corresponding game.
+'''
 def menu():
     #import tkinter
     from tkinter.simpledialog import askinteger
@@ -23,13 +27,12 @@ def menu():
     mathgame = tkinter.Label(root, text="Equation Quest!", font = titleFont)
     mathgame.pack()
     
-    #functions
+    # functions for each game
     def play_focus_mode():
         import focus_mode
         root.withdraw()
         focus_mode.focus_mode()
         
-
     def start_time_attack():
         import time_attack
         root.withdraw()
@@ -40,11 +43,10 @@ def menu():
         root.withdraw()
         high_score.play_high_score()
 
-
-    #button
+    # buttons for each game
     focusmode = tkinter.Button(root, text ="Focus Mode",font = buttonFonts,fg = 'white', bg = 'blue',command = play_focus_mode)
     focusmode.place(x=300,y=300)
-
+    
     timeattack = tkinter.Button(root, text = "Time Attack", font = buttonFonts, fg = 'white', bg = 'red', command = start_time_attack)
     timeattack.place(x= 600, y=300)
 
