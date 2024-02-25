@@ -3,9 +3,6 @@ import random
 import math
 import time
 
-# list of valid operations
-operations = [" + ", " - ", " * ", " / ", " ^", " ^-"]
-
 # global variables
 ans = 0
 
